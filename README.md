@@ -1,6 +1,6 @@
 # ✍️ Accent Helper - Guida all'uso
 
-**Premere sulla immaigne sottostante per vedere l'anteprima:**   
+**Premere sulla immagine sottostante per vedere l'anteprima:**   
 [![Guarda il video](Graphics/UsageExamplePic.png)](Graphics/UsageExample.mp4)
 
 ## 🚀 Cos'è?
@@ -13,3 +13,5 @@ Basta inserire la vocale desiderata e successivamente con un semplice click copi
 ## 💻 Come compilare:
  - Installare pyinstaller con ```pip install pyinstaller```
  - **Compilare** con ```pyinstaller --icon=Graphics/Icon.ico --noconsole --onefile AccentHelper.py```
+
+---
