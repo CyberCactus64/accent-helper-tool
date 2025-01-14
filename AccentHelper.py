@@ -1,6 +1,9 @@
 import tkinter as tk
 import pyperclip # pip install pyperclip
 
+# cambiare questa riga con il path completo della icona
+icon_path = r'C:\Users\edowo\Desktop\Coding Projects\Accent Helper Tool\Graphics\Icon.ico'
+
 # dizionario con tutte le versioni accentate di ogni vocale
 VOWELS_DICT = {
 	'a': ['à', 'á', 'â', 'ä', 'ã', 'å', 'ā'],
@@ -46,12 +49,24 @@ def show_accents():
 		btn = tk.Button(results_frame, text=acc_vowel, font=("Arial", 18), bg="gray20", fg="white", command=lambda v=acc_vowel: copy_to_clipboard(v))
 		btn.pack(side=tk.LEFT, padx=5, pady=5)
 
+def center_window(window):
+    window.update_idletasks()
+    width = window.winfo_width()
+    height = window.winfo_height()
+    screen_width = window.winfo_screenwidth()
+    screen_height = window.winfo_screenheight()
+    x = (screen_width - width) // 2
+    y = (screen_height - height) // 2
+    window.geometry(f"{width}x{height}+{x}+{y}")
+
 # main window
 root = tk.Tk()
 root.title("Accent Helper")
+root.iconbitmap(icon_path) # vedere variabile dichiarata a inizio script
 root.geometry("400x180")
 root.minsize(400, 180)
 root.maxsize(400, 150)
+center_window(root)
 root.configure(bg="gray15")
 
 # sezione input della lettera (vocale)
